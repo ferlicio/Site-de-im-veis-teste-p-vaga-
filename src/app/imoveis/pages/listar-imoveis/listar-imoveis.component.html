@@ -11,6 +11,7 @@
                         <imovel-card *ngFor="let imv of imoveis"
                         [imovel]="imv"
                         [foto]= imv.foto
+                        [routerLink]="'/imoveis/'+ imv.id"
                         >
                         </imovel-card>
                     </div>
