@@ -2,7 +2,7 @@
   display: none;
 }
 
-form {
+form{
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -28,3 +28,4 @@ div {
   display: flex;
   justify-content: space-between;
 }
+

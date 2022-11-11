@@ -4,8 +4,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Imovel } from '../../models/imovel';
 import { ImovelService } from '../../services/imovel.service';
-import { ConfirmarDelecaoComponent } from '../../components/confirmar-delecao/confirmar-delecao.component';
 import { FormImovelComponent } from '../../components/form-imovel/form-imovel.component';
+import { ConfirmarDelecaoComponent } from '../../components/confirmar-delecao/confirmar-delecao.component';
 
 @Component({
   selector: 'app-listar-imoveis',

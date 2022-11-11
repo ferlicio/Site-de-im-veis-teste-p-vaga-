@@ -39,3 +39,8 @@ mat-card-content {
   margin-bottom: 0px;
 }
 
+.nome {
+  font-size: 18px;
+  font-weight: bold;
+}
+
