@@ -1,0 +1,19 @@
+section {
+    width: auto;
+    height: calc(100vh - 64px);
+    padding: 20px 5px 20px 48px;
+    background: #242729;
+
+}
+footer span {
+    color: white;
+    font-size: 20px;
+    font-family: DINOT, sans-serif;
+    margin: 0px 20px;
+    bottom: 5px;
+}
+#add {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+  }

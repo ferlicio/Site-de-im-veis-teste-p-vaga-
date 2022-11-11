@@ -1,0 +1,23 @@
+<mat-card class="card">
+    <img mat-card-image [src]="foto" alt="Photo of a Shiba Inu">
+    <mat-card-header>
+        <mat-card-title>{{imovel.valor | currency: 'BRL' }} <span>+{{imovel.condominio}} condominio</span></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{imovel.nome}}</p>
+        <mat-action-row class="info">
+            <span>{{imovel.quartos}} quartos</span>
+            <span>{{imovel.banheiros}} banheiros</span>
+            <span>{{imovel.area}}m²</span>
+            <span>{{imovel.mobiliado? "não ":""}}mobiliado</span>
+        </mat-action-row>
+            <p>disponivel para: 
+                <span *ngIf="imovel.venda"> venda</span>
+                <span *ngIf="imovel.venda && imovel.aluguel">&</span>
+                <span *ngIf="imovel.aluguel"> aluguel</span>
+            </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>VER MAIS</button>
+    </mat-card-actions>
+  </mat-card>
