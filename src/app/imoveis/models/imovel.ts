@@ -1,3 +1,5 @@
+import { endereco } from "./endereco";
+
 export interface Imovel {
 id: number,
 nome: string,
@@ -11,17 +13,7 @@ area: number,
 venda: boolean,
 aluguel: boolean,
 dataAnuncio: string,
-endereco: [
-    {
-        id: number,
-        rua: string,
-        numero: number,
-        bairro: string,
-        cidade: string,
-        uf: string,
-        cep: string
-    }
-],
+endereco: endereco,
 proprietarioId: number,
 foto: string
 }

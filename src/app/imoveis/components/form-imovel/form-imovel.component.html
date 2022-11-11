@@ -86,17 +86,66 @@
         <option value="false">não</option>
         <option value="true">sim</option>
       </select>
-    </mat-form-field>
+    </mat-form-field> 
     <mat-form-field appearance="fill">
       <mat-label>CEP</mat-label>
       <input
-        type="number"
+        type="text"
         placeholder="Ex: 00000-000"
         matInput
-        formControlName="CEP"
-        (change)="getEndereco()"
+        formControlName="cep"
+        (change)="getEndereco(this.formImovel.value.cep)"
       >
     </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Rua</mat-label>
+      <input
+        type="text"
+        placeholder="Ex: Rua das flores"
+        matInput
+        formControlName="rua"
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Numero da casa</mat-label>
+      <input
+        type="number"
+        matInput
+        formControlName="numero"
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Bairro</mat-label>
+      <input
+        type="text"
+        placeholder="Ex: bairro do limão"
+        matInput
+        formControlName="bairro"
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Cidade</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="cidade"
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Estado</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="uf"
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Proprietário</mat-label>
+      <select matNativeControl required formControlName="proprietarioId">
+        <option disabled value="default">Escolha uma opção</option>
+        <option *ngFor="let proprietario of proprietarios"  [value]="proprietario.id">{{proprietario.nome}}</option>
+      </select>
+    </mat-form-field> 
     <input
       type="file"
       accept="image/*"

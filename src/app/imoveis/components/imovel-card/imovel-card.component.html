@@ -1,10 +1,10 @@
 <mat-card class="card">
-    <img mat-card-image [src]="foto" alt="Photo of a Shiba Inu">
+    <img mat-card-image [src]="foto" alt="foto da casa">
     <mat-card-header>
         <mat-card-title>{{imovel.valor | currency: 'BRL' }} <span>+{{imovel.condominio}} condominio</span></mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <p>{{imovel.nome}}</p>
+        <p class="nome">{{imovel.nome | titlecase}}</p>
         <mat-action-row class="info">
             <span>{{imovel.quartos}} quartos</span>
             <span>{{imovel.banheiros}} banheiros</span>
@@ -12,9 +12,9 @@
             <span>{{imovel.mobiliado? "não ":""}}mobiliado</span>
         </mat-action-row>
             <p>disponivel para: 
-                <span *ngIf="imovel.venda"> venda</span>
-                <span *ngIf="imovel.venda && imovel.aluguel">&</span>
-                <span *ngIf="imovel.aluguel"> aluguel</span>
+                <span *ngIf="imovel.venda">venda</span>
+                <span *ngIf="imovel.venda && imovel.aluguel"> & </span>
+                <span *ngIf="imovel.aluguel">aluguel</span>
             </p>
     </mat-card-content>
     <mat-card-actions>
