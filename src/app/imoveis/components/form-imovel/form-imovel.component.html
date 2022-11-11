@@ -1,0 +1,117 @@
+<div>
+  <h2 mat-dialog-title>Novo Imóvel</h2>
+  <mat-spinner color="accent" mode="indeterminate" diameter="20" *ngIf="salvandoImovel"></mat-spinner>
+</div>
+<section mat-dialog-content>
+  <form action="" [formGroup]="formImovel" (ngSubmit)="salvar()">
+    <img [src]="fotoPreview || '/assets/generic-house.png'" id="image-preview">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input
+        type="text"
+        placeholder="Ex: casa de campo"
+        matInput
+        formControlName="nome"
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>tipo</mat-label>
+      <select matNativeControl required formControlName="tipo">
+        <option disabled value="default">Escolha uma opção</option>
+        <option value="casa">casa</option>
+        <option value="apartamento">apartamento</option>
+      </select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>valor</mat-label>
+      <input
+        type="number"
+        matInput
+        formControlName="valor"
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>condominio</mat-label>
+      <input
+        type="number"
+        matInput
+        formControlName="condominio"
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>quartos</mat-label>
+      <input
+        type="number"
+        matInput
+        formControlName="quartos"
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>banheiros</mat-label>
+      <input
+        type="number"
+        matInput
+        formControlName="banheiros"
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>mobiliado?</mat-label>
+      <select matNativeControl required formControlName="mobiliado">
+        <option disabled value="default">Escolha uma opção</option>
+        <option value="false">não</option>
+        <option value="true">sim</option>
+      </select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>area construida</mat-label>
+      <input
+        type="number"
+        matInput
+        formControlName="area"
+      >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>disponivel para venda?</mat-label>
+      <select matNativeControl required formControlName="venda">
+        <option disabled value="default">Escolha uma opção</option>
+        <option value="false">não</option>
+        <option value="true">sim</option>
+      </select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>disponivel para aluguel?</mat-label>
+      <select matNativeControl required formControlName="aluguel">
+        <option disabled value="default">Escolha uma opção</option>
+        <option value="false">não</option>
+        <option value="true">sim</option>
+      </select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>CEP</mat-label>
+      <input
+        type="number"
+        placeholder="Ex: 00000-000"
+        matInput
+        formControlName="CEP"
+        (change)="getEndereco()"
+      >
+    </mat-form-field>
+    <input
+      type="file"
+      accept="image/*"
+      id="file-input"
+      #fileInput
+      (change)="recuperarFoto($event)"
+      formControlName="foto"
+    >
+    <button
+      type="button"
+      mat-stroked-button
+      color="primary"
+      (click)="fileInput.click()"
+    >Selecione uma imagem</button>
+
+    <button type="submit" [disabled]="formImovel.invalid" mat-raised-button color="accent" id="salvar">Salvar</button>
+  </form>
+</section>

@@ -22,5 +22,6 @@ endereco: [
         cep: string
     }
 ],
-proprietarioId: number
+proprietarioId: number,
+foto: string
 }

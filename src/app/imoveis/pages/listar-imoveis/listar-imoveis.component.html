@@ -1,1 +1,29 @@
 <app-navbar></app-navbar>
+<section>
+    <div class="dashboard-container">
+      <div class="imoveis">
+        <div class="search">
+          <input type="text" id="formGroupExampleInput" placeholder="Pesquise pelo nome" >
+        </div>
+        <ng-container *ngIf="imoveis.length>0;else notFound">
+            
+                    <div class="cards-container">
+                        <imovel-card *ngFor="let imv of imoveis"
+                        [imovel]="imv"
+                        [foto]= imv.foto
+                        >
+                        </imovel-card>
+                    </div>
+
+        </ng-container>
+        <ng-template #notFound>
+          <div class="notfound">
+            <p>Nenhum Imovel Encontrado...</p>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </section>
+  <button mat-mini-fab color="accent" (click)="abrirFormImoveis()" id="add">
+    <mat-icon>add</mat-icon>
+  </button>

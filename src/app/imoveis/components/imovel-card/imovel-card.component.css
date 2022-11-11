@@ -1,0 +1,41 @@
+.card {
+  width: 300px;
+  margin: 10px;
+  display: inline-block;
+}
+
+mat-card:hover {
+  box-shadow: 0 0 13px rgba(255, 255, 255, 0.3);
+}
+
+mat-card-title>span {
+  font-size: 13px;
+
+}
+
+p>span {
+  font-weight: bold;
+}
+
+  
+.info {
+  display:flex;
+  justify-content: space-between;
+  padding: 0px 5px;
+}
+
+img {
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+}
+
+button {
+  width: 100%;
+  margin: 5px 0px;
+}
+
+mat-card-content {
+  margin-bottom: 0px;
+}
+
