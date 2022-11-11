@@ -1,0 +1,19 @@
+mat-toolbar-row {
+    display: flex;
+    align-items: center;
+    background-color: #14A663;
+  }
+  
+  .separador {
+    flex-grow: 1;
+  }
+
+  img {
+    background-color: rgb(255, 255, 255);
+    border: 6px solid #ffffff;
+    border-radius: 5px; 
+  }
+  button {
+    font-size: 1.2em;
+    background-color: #129e5d;
+  }
