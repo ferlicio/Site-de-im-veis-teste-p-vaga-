@@ -3,28 +3,23 @@ import { CommonModule } from '@angular/common';
 
 
 import { MaterialModule } from '../material/material.module';
-import { imoveisRoutingModule } from './imoveis-routing.module';
 import { NavbarComponent } from '../components/navbar/navbar.component';
-import { ListarImoveisComponent } from './pages/listar-imoveis/listar-imoveis.component';
-import { FormImovelComponent } from './components/form-imovel/form-imovel.component';
 import { ConfirmarDelecaoComponent } from './components/confirmar-delecao/confirmar-delecao.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ImovelCardComponent } from './components/imovel-card/imovel-card.component';
 import { ImovelComponent } from './pages/imovel/imovel.component';
+import { imovelRoutingModule } from './imovel-routing.module';
 
 
 @NgModule({
   declarations: [
-    ListarImoveisComponent,
-    FormImovelComponent,
-    ImovelCardComponent,
-    NavbarComponent,
+    ConfirmarDelecaoComponent,
+    ImovelComponent
   ],
   imports: [
     CommonModule,
-    imoveisRoutingModule,
+    imovelRoutingModule,
     MaterialModule,
     ReactiveFormsModule
   ]
 })
-export class ImoveisModule { }
+export class ImovelModule { }

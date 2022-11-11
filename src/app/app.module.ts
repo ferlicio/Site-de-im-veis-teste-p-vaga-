@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt'
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 registerLocaleData(ptBr);
 
